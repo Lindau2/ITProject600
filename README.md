@@ -34,9 +34,7 @@
     <ul>
       <li><strong>Frontend:</strong> React Native (mobile), React.js (web)</li>
       <li><strong>Backend:</strong> Python (Flask or Django)</li>
-      <li><strong>Database:</strong> Microsoft SQL Server</li>
-      <li><strong>Analytics:</strong> Power BI or custom dashboards</li>
-      <li><strong>Hosting:</strong> Azure or Firebase</li>
+      <li><strong>Database:</strong> MySQL Workbench </li>
     </ul>
   </div>
   <div class="section">
