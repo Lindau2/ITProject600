@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Successful</title>
+  <link rel="stylesheet" href="registration.css" />
+</head>
+<body>
+
+  <img src="Logo1.png" alt="Smart Energy Meter Logo" class="logo" />
+
+<div class="container">
+  <h2>Welcome, <span id="username"></span>!</h2>
+
+  <p>
+    A verification link has been sent to <strong id="useremail"></strong>.
+    Please check your inbox to continue.
+  </p>
+
+  <p id="resendMessage">
+    Didn’t get the email?
+    <a href="#" onclick="resendEmail()">Resend</a>
+  </p>
+</div>
+
+<footer>
+  © 2025 Smart Energy Meter | ITProject600
+</footer>
+
+  <script>
+    const name = localStorage.getItem('sem_name');
+  const email = localStorage.getItem('sem_email');
+
+  document.getElementById('username').textContent = name || 'User';
+  document.getElementById('useremail').textContent = email || 'your@email.com';
+
+  function resendEmail() {
+    const msg = document.getElementById('resendMessage');
+    msg.innerHTML = `<span style="color: green; font-weight: bold;">Verification email resent to <strong>${email}</strong>.</span>`;
+
+    setTimeout(() => {
+      msg.innerHTML = `Didn’t get the email? <a href="#" onclick="resendEmail()">Resend</a>`;
+    }, 5000);
+  }
+  </script>
+
+</body>
+</html>
